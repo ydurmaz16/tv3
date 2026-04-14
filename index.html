@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="origin">
+    <title>Canlı TV</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">CANLI<span>TV</span></div>
+            <div class="sidebar-subtitle">// LIVE STREAM</div>
+        </div>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Kanal ara...">
+        </div>
+        <div id="channels"></div>
+    </nav>
+
+    <!-- SIDEBAR TOGGLE -->
+    <button class="toggle-btn" id="sidebar-toggle" onclick="toggleSidebar()">◀</button>
+
+    <!-- ANA İÇERİK -->
+    <main class="main-content">
+        <header class="layout-header">
+            <div class="status">
+                <span id="current-channel">Yayın Merkezi</span>
+            </div>
+            <div class="layout-buttons">
+                <button onclick="setLayout(1)">1'li</button>
+                <button onclick="setLayout(2)">2'li</button>
+                <button onclick="setLayout(4)">4'lü</button>
+                <button onclick="toggleCinemaMode()" id="cinema-btn">🎬 Sinema</button>
+            </div>
+        </header>
+        <div id="players">
+            <div class="welcome-msg">Bir kanal seçin</div>
+        </div>
+    </main>
+
+    <script src="script1.js"></script>
+</body>
+</html>
